@@ -23,16 +23,29 @@ def drawlines(xs,ys,labels=[],xlabel_name="",ylable_name=""):
     if xlabel_name:
         plt.xlabel(xlabel_name)  
     if ylable_name:
-        plt.ylabel(ylable_name)  
-    
+        plt.ylabel(ylable_name)    
     #辅助线
     plt.grid(True)
-    
     # 展示
     plt.show()
+
+
+
 
 if __name__ == '__main__':
     xs=[[1,2,3,4],[1,2,3,4],[1,2,3,4]]
     ys=[[1,1,1,1],[1,2,3,4],[3,3,2,3]]
     labels=["s1","s2","s3","s4"]
     drawlines(xs,ys,labels,xlabel_name="x",ylable_name="y")
+    
+    
+    
+    import numpy as np
+    x=np.arange(1,10,0.05)
+    xs=[]
+    xs.append(x)
+    ys=[]
+    ys.append(x**2)
+    drawlines(xs,ys,labels,xlabel_name="x",ylable_name="y")
+    
+    

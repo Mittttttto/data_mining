@@ -19,8 +19,7 @@ def stochastic_gradient_descent():
         print i
         diff=theta1*x_list[i]+theta2-y_list[i]
         theta1=theta1-alpha*diff*x_list[i]
-        theta2=theta2-alpha*diff
-        
+        theta2=theta2-alpha*diff       
         gradient_cost[0]=gradient_cost[0]+diff**2/2
         print  "gradient_cost is"+str(gradient_cost[0]);
         if abs(gradient_cost[0]-gradient_cost[1])<0.0000001:
@@ -55,6 +54,6 @@ if __name__ == '__main__':
         ys.append(y)
         print "time "+str(i)+" theta1 is "+str(theta1_list[i])+"theta2 is "+str(theta2_list[i])
         labels.append("line"+str(i))
-
+        
     #print "draw pic"
     mat.drawlines(xs, ys, labels, xlabel_name="x", ylable_name="y")
